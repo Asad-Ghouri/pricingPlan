@@ -4,83 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pricing Plan</title>
     <style>
-      @font-face {
-        font-family: "Mistrully";
-        src: url(" https://itishstudios.net/assert/font/Mistrully.ttf");
-        font-weight: normal; /* Adjust font-weight if needed */
-        font-style: normal; /* Adjust font-style if needed */
-      }
-      .title {
-        font-family: "Mistrully", sans-serif;
-      }
-
-      .longTermQuest {
-        background: #65d2ef;
-        display: inline-flex;
-      }
-      .qtext {
-        padding-left: 5rem;
-      }
-      .qtext .title,
-      .qtext p {
-        font-weight: 550;
-      }
       .container {
         margin-top: 1.3rem;
         display: flex;
         justify-content: center;
       }
-      .price {
+      .plan {
         display: flex;
-        padding: 0;
-      }
-      .price .money {
-        font-size: 41px;
-        font-weight: bolder;
-      }
-      .currency {
-        display: flex;
-        flex-direction: column;
-        margin-top: 12px;
-      }
-      .plan1 {
-        display: inline-flex;
         flex-direction: column;
         border: 2px solid #24c0ea;
         background-color: white;
-        /* padding: 12px; */
-        /* border-top: none; */
-        /* border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px; */
         border-radius: 8px;
+        padding: 12px;
         margin-right: 26px;
-        padding: 20px;
-        width: 24%;
+        flex: 1; /* Add flex: 1 to make all plans equal width */
+      }
+      .price {
+        font-size: 54px;
+        font-weight: bolder;
       }
       .gettext {
         background: #65d2ef;
         padding: 12px;
         font-size: 17px;
-        /* border-top: 2px solid #24c0ea;
-        border-bottom: 2px solid #24c0ea; */
-        padding-left: 8px;
-        margin-left: -20px;
-        margin-right: -20px;
-      }
-      .heading {
-        padding: 12px;
-        padding-bottom: 0px;
-        padding-top: 0;
-        padding-left: 8px;
       }
       .rates {
-        padding: 17px;
-        padding: 17px;
-        padding-bottom: 0;
-        margin-top: -4px;
-        padding-left: 10px;
+        padding: 17px 0;
       }
       .percentage {
         padding-right: 11px;
@@ -90,94 +40,31 @@
       .cal_per {
         font-weight: 600;
       }
-      .rates1 {
-        margin-top: -18px;
-      }
-      .basicheading {
-        margin-top: 42px;
-      }
-      .basicrates {
-        margin-top: -19px;
-      }
       button {
         width: 90%;
-        display: flex;
         margin: auto;
         margin-top: 34px;
         margin-bottom: 19px;
-        justify-content: center;
-        border: none;
         padding: 12px;
         border-radius: 20px;
         color: white;
         background: black;
-      }
-      .cr2,
-      .cr3 {
-        padding-top: 18px;
+        border: none;
       }
       @media (max-width: 600px) {
         .container {
-          /* flex-wrap: wrap; */
-          flex-direction: column;
+          flex-wrap: wrap;
         }
-        .plan1 {
+        .plan {
           margin-bottom: 3rem;
-          width: unset;
-          padding: 36px;
-        }
-        .qtext {
-          padding-left: 0;
-        }
-        .gettext {
-          margin-left: -36px;
-          margin-right: -36px;
-        }
-        .heading {
-          margin-left: -22px;
-        }
-        .rates {
-          margin-left: -21px;
         }
       }
     </style>
   </head>
   <body>
-    <center><h2 class="longTermQuest">Long Term Questions</h2></center>
-    <div class="qtext">
-      <div class="title">On the list</div>
-      <p>Focused on getting started and making content a habit</p>
-      <p>[Put The TOP 4-5 Features bullet point]</p>
-    </div>
-    <br />
-    <div class="qtext">
-      <div class="title">The A list</div>
-      <p>Focused on growth for your content</p>
-      <p>[Put The TOP 4-5 Features bullet point]</p>
-    </div>
-
-    <br />
-    <div class="qtext">
-      <div class="title">The Ryan hosling</div>
-      <p>Your media company in a box</p>
-      <p>[Put The TOP 4-5 Features bullet point]</p>
-    </div>
-    <br />
-    <br />
-    <div class="qtext">
-      <p>[EXAMPLE Below]</p>
-    </div>
-
     <div class="container">
-      <div class="plan1">
-        <div class="price">
-          <span class="money">On the List</span>
-          <!-- <div class="currency">
-            <span>USD</span>
-            <span>/mo</span>
-          </div> -->
-        </div>
-
+      <div class="plan">
+        <div class="price">On the List</div>
         <h3 class="gettext">
           Focused on getting started and making content a habit
         </h3>
@@ -185,7 +72,7 @@
           <div class="heading">
             <h3>Credit card rates</h3>
           </div>
-          <div class="rates rates1">
+          <div class="rates">
             <span class="percentage">%</span>
             <span class="cal_per">2.9% + 30c USD online</span>
           </div>
@@ -196,9 +83,9 @@
         </div>
         <div class="cardrates">
           <div class="heading basicheading">
-            <h3>What's included on Basic</h3>
+            <h3>What's included on the List</h3>
           </div>
-          <div class="rates basicrates">
+          <div class="rates">
             <span class="percentage">✓</span>
             <span class="cal_per">Basic reports</span>
           </div>
@@ -218,21 +105,14 @@
         <button>Try for free</button>
       </div>
 
-      <div class="plan1 plan2">
-        <div class="price">
-          <span class="money">The A List</span>
-          <!-- <div class="currency">
-            <span>USD</span>
-            <span>/mo</span>
-          </div> -->
-        </div>
-
+      <div class="plan">
+        <div class="price">The A List</div>
         <h3 class="gettext">Focused on growth for your content</h3>
         <div class="cardrates">
           <div class="heading">
-            <h3 class="cr2">Credit card rates</h3>
+            <h3>Credit card rates</h3>
           </div>
-          <div class="rates rates1">
+          <div class="rates">
             <span class="percentage">%</span>
             <span class="cal_per">2.6% + 30c USD online</span>
           </div>
@@ -245,7 +125,7 @@
           <div class="heading basicheading">
             <h3>What's included on Shopify</h3>
           </div>
-          <div class="rates basicrates">
+          <div class="rates">
             <span class="percentage">✓</span>
             <span class="cal_per">Professional reports</span>
           </div>
@@ -265,21 +145,14 @@
         <button>Try for free</button>
       </div>
 
-      <div class="plan1 plan3">
-        <div class="price">
-          <span class="money">The Ryan Gosling</span>
-          <!-- <div class="currency">
-            <span>USD</span>
-            <span>/mo</span>
-          </div> -->
-        </div>
-
+      <div class="plan">
+        <div class="price">The Ryan Gosling</div>
         <h3 class="gettext">Your media company in a box</h3>
         <div class="cardrates">
           <div class="heading">
-            <h3 class="cr3">Credit card rates</h3>
+            <h3>Credit card rates</h3>
           </div>
-          <div class="rates rates1">
+          <div class="rates">
             <span class="percentage">%</span>
             <span class="cal_per">2.4% + 30c USD online</span>
           </div>
@@ -292,7 +165,7 @@
           <div class="heading basicheading">
             <h3>What's included on Advanced</h3>
           </div>
-          <div class="rates basicrates">
+          <div class="rates">
             <span class="percentage">✓</span>
             <span class="cal_per">Custom report builder</span>
           </div>
